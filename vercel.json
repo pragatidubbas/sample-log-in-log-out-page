@@ -3,16 +3,15 @@
     "rewrites": [
         {
             "source": "/api/(.*)",
-            "destination": "backend/index.js"
+            "destination": "/backend/index.js"
         },
         {
             "source": "/(.*)",
-            "destination": "/frontend/$1",
-            "check": true
+            "destination": "/frontend/dist/$1"
         },
         {
             "source": "/(.*)",
-            "destination": "/frontend/index.html"
+            "destination": "/frontend/dist/index.html"
         }
     ]
 }
