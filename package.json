@@ -1,8 +1,12 @@
 {
     "name": "sample-auth-monorepo",
     "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "frontend",
+        "backend"
+    ],
     "scripts": {
-        "build": "npm run install-all && cd frontend && npm run build",
-        "install-all": "cd backend && npm install && cd ../frontend && npm install"
+        "build": "npm run build --workspace=frontend"
     }
 }
